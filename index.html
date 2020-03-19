@@ -9,111 +9,97 @@
 <body>
 
   <div class="container">
-    <div class="row mt-2">
+    <div class="row">
       <div class="col-sm">
+
         <div class="alert alert-success" role="alert">
-          <h4 class="alert-heading">passar diretamente o objeto</h4>
-          <p>console.log(document);</p>
+          <h4 class="alert-heading">Obter o DOM completo</h4>
+          <p class="text-primary">console.log(document);</p>
         </div>
 
         <div class="alert alert-success" role="alert">
-          <h4 class="alert-heading">atribui a variavel valorx o objeto pesquisado</h4>
-          <p>var valorx = document.querySelector("nomedoobjeto");</p>
+          <h4 class="alert-heading">Atribuir a uma variavel o elemento pesquisado</h4>
+          <p class="text-primary">var valorx = document.querySelector("nome_do_elemento");</p>
+          <p class="text-primary">console.log(valorx.textContent);</P><span> - Imprime o conteudo no log</span>   
+          <p class="text-primary">valorx.textContent = "outrovalor";</p><span> - alterar o conteudo do Elemento no DOM</span>       
         </div>
-
-        <div class="alert alert-success" role="alert">
-          <h4 class="alert-heading">imprimir o conteudo da variavel </h4>
-          <p>console.log(valorx.textContent);</p>
-        </div>
-
-        <div class="alert alert-success" role="alert">
-          <h4 class="alert-heading">alterar o conteudo</h4>
-          <p>valorx.textContent = "outrovalor";</p>
-        </div>
-
-        <div class="alert alert-success" role="alert">
+        <div class="alert alert-danger" role="alert">
           <h4 class="alert-heading">Boas Praticas</h4>
         </div>
 
         <div class="alert alert-success" role="alert">
-          <h4 class="alert-heading">
-            <p>querSelectorAll = // Traz um array de todos os objetos
-              var teste = document.querySelectorAll(".objeto");
-              for (var i = 0; teste.length; i++){
-                  console.log(teste[i]);
+          <h4 class="alert-heading">           
+            <h4 class="alert-heading">Array com todos os Elementos</h4>
+            <p class="text-primary">querSelectorAll = // Traz um array de todos os elementos<br>
+              var teste = document.querySelectorAll(".elemento");<br>
+              for (var i = 0; teste.length; i++){<br>
+                  console.log(teste[i]);<br>
               }
-              </p>
-              <h4 class="alert-heading">buscar pelo objeto</h4>
-              <p>var valorx = document.querySelector(.titulo); // busca pela classe
-              var valorx = document.querySelector(#titulo); // busca pelo ID
+            </p>
+
+              <h4 class="alert-heading">Bucar Elementos</h4>
+              <p class="text-primary">var valorx = document.querySelector(.titulo); - . (ponto) realiza busca pela classe<br>
+              var valorx = document.querySelector(#titulo); - # (hasgtag) realiza busca pelo ID
               <h4 class="alert-heading">Pegando valores de tabela e somando
-              var y = document.querySelector("#conteudo TR");
-              var z = y.querySelector(".conteudo TD");
-              var val = z.textContent; // valor da TD
+              var y = document.querySelector("#conteudo TR");<br>
+              var z = y.querySelector(".conteudo TD");<br>
+              var val = z.textContent; - valor da TD
               </p>
-              <h4 class="alert-heading">adicionar atributos aos objetos</h4>
-              <p>
-              var valorx = document.querySelector(.titulo); // busca pela classe
-              valorx.classList.add("nome de uma classe qualquer ou inclusive de um css")
+              <h4 class="alert-heading">Adicionar atributos aos Elementos</h4>
+              <p class="text-primary">
+              var valorx = document.querySelector(.titulo); - busca pela classe<br>
+              valorx.classList.add("nome_de_uma_classe_qualquer_ou__de_um_css")
               </p>
-              <h4 class="alert-heading">Adicionar um escutador, evento</h4>
-              <p>
-              var valorx = document.querySelector(.titulo); // busca pela classe
-              valorx.addEventListener("click", mostraMensagem);
-              
-              function mostraMensagem(){
-                  alert("Mensagem");
+              <h4 class="alert-heading">Adicionar um escutador, Evento</h4>
+              <p class="text-primary">
+              var valorx = document.querySelector(.titulo); - busca pela classe<br>
+              valorx.addEventListener("click", mostraMensagem);<br>
+              <br>
+              function mostraMensagem(){<br>
+                  alert("Mensagem");<br>
               }
               </p>
-              <h4 class="alert-heading">OU funcao anonima</h4>
-              <p>
-              valorx.addEventListener("click", function() {
-                  alert("Mensagem");
+              <h4 class="alert-heading">Funcao anonima</h4>
+              <p class="text-primary">
+              valorx.addEventListener("click", function() {<br>
+                  alert("Mensagem");<br>
               });
               </p>
               <h4 class="alert-heading">Se for um botao dentro de um for devo usar como abaixo, pois a funcao padrao de um botao e recarregar a pagina e enviar o form</h4>
-              <p>
-              var btn = document.querySelector(.botao); // busca pela classe
-              valorx.addEventListener("click", function(event) {
-                  event.preventDefault; // desabilita o comportamento padrao mas preciso receber o event
-                  var form = document.querySelector(".pegaroform");
-                  // quando uso input posso pegar diretamente  a propriedade name dele
-                  console.log(form.idade);  // pega o input completo
-                  console.log(form.idade.value);  // para pegar o valor
+              <p class="text-primary">
+              var btn = document.querySelector(.botao); - busca pela classe<br>
+              valorx.addEventListener("click", function(event) {<br>
+                  event.preventDefault; - desabilita o comportamento padrao mas preciso receber o event<br>
+                  var form = document.querySelector(".pegaroform");<br>
+                  <h5>quando uso input posso pegar diretamente  a propriedade name dele</h5><br>
+                  console.log(form.idade);  // pega o input completo<br>
+                  console.log(form.idade.value);  // para pegar o valor<br>
               });
               </p>
               <h4 class="alert-heading">criar elementos</h4>
-              <p>
-              var teste = document.createElement("tr");
+              <p class="text-primary">
+              var teste = document.createElement("tr");<br>
               var teste1 = document.createElement("td");
               </p>
-              <h4 class="alert-heading">passar valor ao elemento
-              <p>
+              <h4 class="alert-heading">Atribuir valor ao elemento
+              <p class="text-primary">
               teste1.textContent = "valorrrr";
               </p>
-              <h4 class="alert-heading">colocar como filho</h4>
-              <p>
+              <h4 class="alert-heading">Adicionar como filho de um elemento</h4>
+              <p class="text-primary">
               teste.appendChild(teste1);
               </p>
-              <h4 class="alert-heading">olocar na tabela</h4>
-              <p>
-              var tabela = document.querySelector("#minhatabela");
+              <h4 class="alert-heading">Adicionar em uma tabela</h4>
+              <p class="text-primary">
+              var tabela = document.querySelector("#minhatabela");<br>
               tabela.appendChild(teste);
               </p>
-
-
 
           </h4>
           <p></p>
         </div>
 
-        <div class="alert alert-success" role="alert">
-          <h4 class="alert-heading"></h4>
-          <p></p>
-        </div>
-   
-
-      </div>
+       </div>
     </div>
   </div>
 
