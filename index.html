@@ -20,8 +20,8 @@
         <div class="alert alert-success" role="alert">
           <h4 class="alert-heading">Atribuir a uma variavel o elemento pesquisado</h4>
           <p class="text-primary">var valorx = document.querySelector("nome_do_elemento");</p>
-          <p class="text-primary">console.log(valorx.textContent);</P><span> - Imprime o conteudo no log</span>   
-          <p class="text-primary">valorx.textContent = "outrovalor";</p><span> - alterar o conteudo do Elemento no DOM</span>       
+          <p class="text-primary">console.log(valorx.textContent);</P><span><small><b> - Imprime o conteudo do elemento no log</b></small></span>   
+          <p class="text-primary">valorx.textContent = "outrovalor";</p><span><small><b> - alterar o conteudo do Elemento no DOM</b></small></span>       
         </div>
         <div class="alert alert-danger" role="alert">
           <h4 class="alert-heading">Boas Praticas</h4>
@@ -30,29 +30,29 @@
         <div class="alert alert-success" role="alert">
           <h4 class="alert-heading">           
             <h4 class="alert-heading">Array com todos os Elementos</h4>
-            <p class="text-primary">querSelectorAll = // Traz um array de todos os elementos<br>
-              var teste = document.querySelectorAll(".elemento");<br>
+            <p class="text-primary">querSelectorAll<span><small><b> - Traz um array de todos os elementos</b></small></span><br>
+              var teste = document.querySelectorAll(".elemento");<br><br>
               for (var i = 0; teste.length; i++){<br>
                   console.log(teste[i]);<br>
               }
             </p>
 
               <h4 class="alert-heading">Bucar Elementos</h4>
-              <p class="text-primary">var valorx = document.querySelector(.titulo); - . (ponto) realiza busca pela classe<br>
-              var valorx = document.querySelector(#titulo); - # (hasgtag) realiza busca pelo ID
-              <h4 class="alert-heading">Pegando valores de tabela e somando
-              var y = document.querySelector("#conteudo TR");<br>
-              var z = y.querySelector(".conteudo TD");<br>
-              var val = z.textContent; - valor da TD
+              <p class="text-primary">var valorx = document.querySelector(.titulo);<span><small><b> - . (ponto) realiza busca pela classe do elemento</b></small></span><br>
+              var valorx = document.querySelector(#titulo);<span><small><b> - # (hasgtag) realiza busca pelo ID do elemento</b></small></span>
+              <h4 class="alert-heading">Pegando valores de uma tabela e somando
+              var y = document.querySelector("#conteudo do elemento TR");<br>
+              var z = y.querySelector(".conteudo elemento TD");<br>
+              var val = z.textContent + y.textContent; - somando os valores  
               </p>
               <h4 class="alert-heading">Adicionar atributos aos Elementos</h4>
               <p class="text-primary">
-              var valorx = document.querySelector(.titulo); - busca pela classe<br>
-              valorx.classList.add("nome_de_uma_classe_qualquer_ou__de_um_css")
+              var valorx = document.querySelector(.titulo);<span><small><b> - busca pela classe</b></small></span><br>
+              valorx.classList.add("nome_de_uma_classe_qualquer_ou__de_um_css");
               </p>
               <h4 class="alert-heading">Adicionar um escutador, Evento</h4>
               <p class="text-primary">
-              var valorx = document.querySelector(.titulo); - busca pela classe<br>
+              var valorx = document.querySelector(.titulo);<span><small><b> - busca pela classe</b></small></span><br>
               valorx.addEventListener("click", mostraMensagem);<br>
               <br>
               function mostraMensagem(){<br>
@@ -67,13 +67,13 @@
               </p>
               <h4 class="alert-heading">Se for um botao dentro de um for devo usar como abaixo, pois a funcao padrao de um botao e recarregar a pagina e enviar o form</h4>
               <p class="text-primary">
-              var btn = document.querySelector(.botao); - busca pela classe<br>
+              var btn = document.querySelector(.botao);<span><small><b> - busca pela classe</b></small></span><br>
               valorx.addEventListener("click", function(event) {<br>
                   event.preventDefault; - desabilita o comportamento padrao mas preciso receber o event<br>
                   var form = document.querySelector(".pegaroform");<br>
                   <h5>quando uso input posso pegar diretamente  a propriedade name dele</h5><br>
-                  console.log(form.idade);  // pega o input completo<br>
-                  console.log(form.idade.value);  // para pegar o valor<br>
+                  console.log(form.idade);<span><small><b> - pega o input completo</b></small></span><br>
+                  console.log(form.idade.value);<span><small><b> - para pegar o valor</b></small></span><br>
               });
               </p>
               <h4 class="alert-heading">criar elementos</h4>
