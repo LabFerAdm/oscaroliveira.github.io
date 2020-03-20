@@ -36,20 +36,24 @@
                   console.log(teste[i]);<br>
               }
             </p>
-
+              <br>
               <h4 class="alert-heading">Bucar Elementos</h4>
               <p class="text-primary">var valorx = document.querySelector(.titulo);<span><small><b> - . (ponto) realiza busca pela classe do elemento</b></small></span><br>
-              var valorx = document.querySelector(#titulo);<span><small><b> - # (hasgtag) realiza busca pelo ID do elemento</b></small></span>
-              <h4 class="alert-heading">Pegando valores de uma tabela e somando
+              var valorx = document.querySelector(#titulo);<span><small><b> - # (hasgtag) realiza busca pelo ID do elemento</b></small></span><br>
+              <br>
+              <h4 class="alert-heading">Pegando valores de uma tabela e somando</h4>
+              <p class="text-primary">
               var y = document.querySelector("#conteudo do elemento TR");<br>
               var z = y.querySelector(".conteudo elemento TD");<br>
-              var val = z.textContent + y.textContent; - somando os valores  
+              var val = z.textContent + y.textContent;<span><small><b> - somando os valores</b></small></span>
               </p>
+              <br>
               <h4 class="alert-heading">Adicionar atributos aos Elementos</h4>
               <p class="text-primary">
               var valorx = document.querySelector(.titulo);<span><small><b> - busca pela classe</b></small></span><br>
               valorx.classList.add("nome_de_uma_classe_qualquer_ou__de_um_css");
               </p>
+              <br>
               <h4 class="alert-heading">Adicionar um escutador, Evento</h4>
               <p class="text-primary">
               var valorx = document.querySelector(.titulo);<span><small><b> - busca pela classe</b></small></span><br>
@@ -59,36 +63,44 @@
                   alert("Mensagem");<br>
               }
               </p>
+              <br>
               <h4 class="alert-heading">Funcao anonima</h4>
               <p class="text-primary">
               valorx.addEventListener("click", function() {<br>
                   alert("Mensagem");<br>
               });
               </p>
+              <br>
               <h4 class="alert-heading">Se for um botao dentro de um for devo usar como abaixo, pois a funcao padrao de um botao e recarregar a pagina e enviar o form</h4>
               <p class="text-primary">
               var btn = document.querySelector(.botao);<span><small><b> - busca pela classe</b></small></span><br>
               valorx.addEventListener("click", function(event) {<br>
-                  event.preventDefault; - desabilita o comportamento padrao mas preciso receber o event<br>
-                  var form = document.querySelector(".pegaroform");<br>
-                  <h5>quando uso input posso pegar diretamente  a propriedade name dele</h5><br>
+                  event.preventDefault;<span><small><b> - desabilita o comportamento padrao mas preciso receber o event</b></small></span><br>
+                  var form = document.querySelector(".pegaroform");
+              </p><br>
+              <h4 class="alert-heading">Obter valor diretamente de um input</h4>
+              <p class="text-primary">
                   console.log(form.idade);<span><small><b> - pega o input completo</b></small></span><br>
                   console.log(form.idade.value);<span><small><b> - para pegar o valor</b></small></span><br>
               });
               </p>
+              <br>
               <h4 class="alert-heading">criar elementos</h4>
               <p class="text-primary">
               var teste = document.createElement("tr");<br>
               var teste1 = document.createElement("td");
               </p>
-              <h4 class="alert-heading">Atribuir valor ao elemento
+              <br>
+              <h4 class="alert-heading">Atribuir valor ao elemento></h4>
               <p class="text-primary">
               teste1.textContent = "valorrrr";
               </p>
+              <br>
               <h4 class="alert-heading">Adicionar como filho de um elemento</h4>
               <p class="text-primary">
               teste.appendChild(teste1);
               </p>
+              <br>
               <h4 class="alert-heading">Adicionar em uma tabela</h4>
               <p class="text-primary">
               var tabela = document.querySelector("#minhatabela");<br>
